@@ -1,0 +1,5 @@
+# TestStation Observations vs. Model
+Velocity AverageError -0.021
+Velocity stdError 1.774
+Velocity MaxError 32.243
+Velocity MinError -1
