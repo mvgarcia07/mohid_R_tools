@@ -1,11 +1,11 @@
 library(timeDate)
 Sys.setenv(TZ='GMT')
-
-source(paste('../../src/ReadMOHIDTimeSeries/', 'mohidstrsplit.R', sep=''))
-source(paste('../../src/ReadMOHIDTimeSeries/', 'mohidreadtimeseriesdate.R', sep=''))
-source(paste('../../src/ReadMOHIDTimeSeries/', 'mohidreadtimeseriesunits.R', sep=''))
-source(paste('../../src/ReadMOHIDTimeSeries/', 'mohidreadtimeseriesheader.R', sep=''))
-source(paste('../../src/ReadMOHIDTimeSeries/', 'mohidunitsfactor.R', sep=''))
+toolpath = '../../src/'
+source(paste(toolpath,'ReadMOHIDTimeSeries/', 'mohidstrsplit.R', sep=''))
+source(paste(toolpath,'ReadMOHIDTimeSeries/', 'mohidreadtimeseriesdate.R', sep=''))
+source(paste(toolpath,'ReadMOHIDTimeSeries/', 'mohidreadtimeseriesunits.R', sep=''))
+source(paste(toolpath,'ReadMOHIDTimeSeries/', 'mohidreadtimeseriesheader.R', sep=''))
+source(paste(toolpath,'ReadMOHIDTimeSeries/', 'mohidunitsfactor.R', sep=''))
 
 mohidtimeseries <- function(filename, colname, factor=1,Timelag=0) 
   
