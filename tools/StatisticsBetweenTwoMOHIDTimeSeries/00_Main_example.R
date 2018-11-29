@@ -1,9 +1,11 @@
-source('../../src/ReadMOHIDTimeSeries/mohidtimeseries.R')
+currentpath = getwd()
+toolpath = '../../src/'
 
-source(paste('../../src/StatisticsBetweenTwoMOHIDTimeSeries/', 'PlotsMohidvsObservations.r', sep=''))
-source(paste('../../src/StatisticsBetweenTwoMOHIDTimeSeries/', 'ComputeRelativeError.r', sep=''))
+source(paste(toolpath,'ReadMOHIDTimeSeries/mohidtimeseries.R',sep=''))
+source(paste(toolpath,'StatisticsBetweenTwoMOHIDTimeSeries/', 'PlotsMohidvsObservations.r', sep=''))
+source(paste(toolpath,'StatisticsBetweenTwoMOHIDTimeSeries/', 'ComputeRelativeError.r', sep=''))
 
-Folder_Analysis ='../../tools/StatisticsBetweenTwoMOHIDTimeSeries'
+Folder_Analysis =paste(currentpath)
 setwd(Folder_Analysis)
 
 Folder_MOHIDOriginal = paste(Folder_Analysis, '/data',sep='')
@@ -38,7 +40,6 @@ TherangeGrowth =c(0,2)
 
 PlotMohid_1Run_WithObservations(Observations,MOHID,StationName, 
                             OutputFolder,PropertyName,PropertyUnits)
-
 #match obs and model, select same points
 SelectedDataToCompare = ComputeRelativeError(Observations, MOHID, StationName,
                                          OutputFolder,PropertyName,PropertyUnits)  
@@ -46,3 +47,7 @@ SelectedDataToCompare = ComputeRelativeError(Observations, MOHID, StationName,
 PlotMohid_1Run_Vs_Observations(SelectedDataToCompare,StationName, 
                            OutputFolder,PropertyName,PropertyUnits)
 
+PlotMohid_1Run_WithObservations_Taylor(SelectedDataToCompare,StationName, 
+                                                  OutputFolder,
+                                                  PropertyName,PropertyUnits)
+  

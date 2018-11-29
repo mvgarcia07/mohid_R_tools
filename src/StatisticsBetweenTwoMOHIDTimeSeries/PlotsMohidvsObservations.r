@@ -161,7 +161,7 @@ PlotMohid_1Run_WithObservations_Taylor<- function(SelectedDataToCompare,StationN
   par(mar=c(4,4,5,4),family = 'serif')
   
   taylor.diagram(SelectedDataToCompare$Observations,SelectedDataToCompare$Model,
-                 col=c('white', "black"),pch=19,pos.cor=FALSE,
+                 col=c("black"),pch=19,pos.cor=FALSE,
                  #xlab="standard deviation",ylab="standard deviation",
                  main=plottitle,
                  show.gamma=TRUE,ngamma=3,
@@ -179,11 +179,11 @@ PlotMohid_1Run_WithObservations_Taylor<- function(SelectedDataToCompare,StationN
   #   legend(...)
   # }  
   
-  add_legend (line = -1, "topleft",lty=c(0,0,0),lwd =c(0,0,0), 
-              c('Model', 'Observations', 'ModelPaulo'), 
-              col=c('black', 'black','black'),
-              pch = c(21,21, 21), pt.bg=c('black', 'white','orange'),
-              pt.cex = c(1.3,1.3,1.3), 
+  add_legend (line = -1, "topleft",lty=c(0,0),lwd =c(0,0), 
+              c('Model', 'Observations'), 
+              col=c('black', 'black'),
+              pch = c(21,15), pt.bg=c('black'),
+              pt.cex = c(1.3,1.3), 
               text.col =c('black'),bty='n',   
               cex =1.,horiz = FALSE) 
   
@@ -334,7 +334,7 @@ PlotMohid_2Run_WithObservations_Taylor<- function(SelectedDataToCompare,StationN
   par(mar=c(4,4,5,4),family = 'serif')
   
   taylor.diagram(SelectedDataToCompare$Observations,SelectedDataToCompare$Model,
-                 col=c('white', "black"),pch=19,pos.cor=FALSE,
+                 col=c("black"),pch=19,pos.cor=FALSE,
                  #xlab="standard deviation",ylab="standard deviation",
                  main=plottitle,
                  show.gamma=TRUE,ngamma=3,
